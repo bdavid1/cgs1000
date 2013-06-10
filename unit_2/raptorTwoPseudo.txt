@@ -1,0 +1,33 @@
+
+/*
+raptorTwo.rap program 2 (unit 2) pseudocode
+Blake Davidson, #2228010
+*/
+
+#output program info (program name, author, author SPC ID)
+display "RAPTOR Program 2: Blake Davidson, #2228010"
+
+#declare price vars (cubans, milk, tax rate)
+cubanPrice = 6.89
+milkPrice = 1.29
+taxRate = 0.07
+
+#get input for number of items. use *Count as var name
+get user input for cubanCount
+get user input for milkCount
+
+#ouput counts set_precision(-1)
+print cubanCount
+print milkCount
+
+#calculate cost of each item, total tax, and total cost of meal
+totalSalesTax = cubanCount * taxRate
+preTaxCubanCost = cubanCount * cubanPrice
+totalMilkCost = milkCount * milkPrice
+totalFoodCost = totalSalesTax + preTaxCubanCost + totalMilkCost
+
+#output cost of each item, total tax, and total cost of meal set_precision(2)
+print cost of cubans = preTaxCubanCost
+print cost of milk = totalMilkCost
+print sales tax on cubans = totalSalesTax
+print total cost of meal = totalFoodCost

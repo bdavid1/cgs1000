@@ -1,0 +1,37 @@
+<?php
+
+//Unit 4 RAPTOR Assignment Pesudo Code
+/*
+SO THAT I DO NOT HAVE TO CREATE MULTIPLE PESUDO CODE FILES
+I AM DEFINING ALL OF MY CLASSES (subcharts - the same as sub routines?)
+IN THIS ONE FILE AND PROCEDURALLY - Blake Davidson
+*/
+
+//output program and author info
+print("raptorFour, Blake Davidson, SPC ID: 2228010")	//in main subchart
+
+//output user's name 5 times
+var userNameInput = input("What is yoru name?"\n)		//userInfo subchart
+
+var i = 5												//in main subchart
+while (!i<=0) {
+	print("Your name is " + userNameInput)
+	i = i - 1
+}
+
+//output circle graphics
+//initialize graphics window with RAPTOR graphics funcs
+Open_Graphics_Window(500, 500)							//in initGraphics subchart
+Clear_Window(Red)
+
+//set circle specs
+var radius = 200 										//in circleSpecs subchart
+var xCord = 250
+var yCord = 250
+
+//loop through Draw_Circle func
+while (radius>=20) {									//in outputCircles subchart
+	Draw_Circle(xCord, yCord, radius, Random_Color, Filled)
+	radius = radius - 20
+}
+?>

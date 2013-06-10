@@ -1,0 +1,35 @@
+
+
+#print to console - author info
+print(programName, authorName, authorID)
+
+#take user inputs
+set voiceUseage to user input
+set dataUsage to user input
+
+#caclulate total costs
+set baseVoiceCost
+set baseDataCost
+set totalCost = baseVoiceCost + baseDataCost
+if voiceUsage > 900 {
+	voiceOver = voiceUsage - 900
+	voiceOverCost = voiceOver * 0.25
+	voiceTotalCost = baseVoiceCost + voiceOverCost
+	totalCost += voiceTotalCost
+} elseif dataUsage > 2 {
+	dataOver = dataUsage -2
+	dataOverCost = dataOver * 10
+	dataTotalCost = baseDataCost + dataOverCost
+	totalCost += dataTotalCost
+} else {
+	voiceTotalCost = baseVoiceCost
+	dataTotalCost = baseDataCost
+}
+
+#output data to console (add words to make sentences *lol*)
+set_precision(2)
+print(minUsage, dataUsage)
+print(baseVoiceCost, baseDataCost)
+print(voiceTotalCost)
+print(dataTotalCost)
+print(totalCost)
